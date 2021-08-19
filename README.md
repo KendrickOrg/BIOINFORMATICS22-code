@@ -1,4 +1,4 @@
-# Implementation ofSeparation of concerns in extended epidemiologicalcompartmental models (ASPEC Paper)
+# Implementation of ASPEC Paper
 
 ## Goal
 
