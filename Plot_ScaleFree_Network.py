@@ -29,19 +29,19 @@ plt.figure(figsize=(12,8))
 nb_initial_infecteds = 50
 initial_infecteds = range(nb_initial_infecteds)
     
-df1 = pd.read_csv('Aparicio_ScaleFreS.csv')
+df1 = pd.read_csv('Stock/Aparicio_ScaleFreS.csv')
 df1 = df1.loc[:, '{#status->#S}']
 df1 = df1*N
 inc1 = - df1.diff()/0.1
 inc1 = inc1[:step_max_plot]
 
-df2 = pd.read_csv('Stroud_HMS.csv')
+df2 = pd.read_csv('Stock/Stroud_HMS.csv')
 df2 = df2.loc[:, '{#status->#S}']
 df2 = df2*N
 inc2 = - df2.diff()/0.1
 inc2 = inc2[:step_max_plot]
 
-df3 = pd.read_csv('Stroud_ScaleS.csv')
+df3 = pd.read_csv('Stock/Stroud_ScaleS.csv')
 df3 = df3.loc[:, '{#status->#S}']
 df3 = df3*N
 inc3 = - df3.diff()/0.1
@@ -56,6 +56,6 @@ plt.ylabel('New infections per day')
 plt.title('Scale Free Network')
 plt.legend()
 plt.show()
-plt.savefig(ScaleFreeF.png)
+plt.savefig(Plot/ScaleFreeF.png)
     
 
