@@ -56,6 +56,6 @@ plt.ylabel('New infections per day')
 plt.title('Scale Free Network')
 plt.legend()
 plt.show()
-plt.savefig(Plot/ScaleFreeF.png)
+plt.savefig('Plot/ScaleFreeF.png')
     
 
