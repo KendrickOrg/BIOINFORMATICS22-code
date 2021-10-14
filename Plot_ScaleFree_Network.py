@@ -28,15 +28,6 @@ plt.figure(figsize=(12,8))
 
 nb_initial_infecteds = 50
 initial_infecteds = range(nb_initial_infecteds)
-
-def f(u,v,infecteds):
-    ni=0
-    for ni in G.neighbors(v):
-        if ni in infecteds:
-            ni = ni + 1
-        p = 1-np.exp(-tau*ni*dt)
-        return random.random()<p
-    
     
 df1 = pd.read_csv('Aparicio_ScaleFreS.csv')
 df1 = df1.loc[:, '{#status->#S}']
