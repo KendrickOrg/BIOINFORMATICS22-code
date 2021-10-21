@@ -1,4 +1,4 @@
-# Implementation of ASPEC Paper
+# Implementation of BIOINFORMATICS 2022 Paper
 
 ## Goal
 
