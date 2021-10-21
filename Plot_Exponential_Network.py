@@ -24,6 +24,7 @@ xx = np.arange(0, step_max_plot*step, step)
 yy = np.arange(0, step_max_plot*step, step)
 
 plt.figure(figsize=(12,8))
+plt.ylim(0.0,400)
 
 nb_initial_infecteds = 50
 initial_infecteds = range(nb_initial_infecteds)
