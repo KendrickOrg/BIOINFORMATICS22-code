@@ -1,4 +1,4 @@
-# Implementation of BIOINFORMATICS 2022 Paper
+# Implementation of BIOINFORMATICS Paper
 
 ## Goal
 
