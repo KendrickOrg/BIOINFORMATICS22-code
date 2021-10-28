@@ -56,4 +56,9 @@ chart addDataFrame:
          {(#status -> #I)})/10000).
 chart yLabel: 'New infections per day'.
 chart legendTitle: 'Aparicio on Poisson network'.
-chart plot 
+chart plot.
+
+df := simulator timeSeriesOutputs.
+file := ('Aparicio_Poisson', DateAndTime now asString,  '.csv') asFileReference.
+df writeToCsv: file.
+
