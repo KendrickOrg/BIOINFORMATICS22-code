@@ -10,7 +10,7 @@ siyrConcern
 	to: {(#status -> #I)}
 	probability: 'lambda'.
 siyrConcern changeParameter: #lambda 
-	value: 'it*r0*alpha'.
+	value: 'it_gen*tau_gen*alpha_gen'.
 siyrConcern
 	addTransitionFrom: {(#status -> #I)} 
 	to: {(#status -> #Y)}
@@ -22,12 +22,12 @@ siyrConcern
 	probability: 'sigma'.
 		
 aparicioConcern := KEModelPart new.	
-aparicioConcern addParameter: #alpha 
+aparicioConcern addParameter: #alpha_gen
 	value: 'tau+gamma'.
-aparicioConcern addParameter: #it 
-	value: 'I/N'.	
-aparicioConcern addParameter: #r0
-	value: '((k*(k-1))/(k))*T'.	
+aparicioConcern addParameter: #it_gen
+	value: 'I/N'.
+aparicioConcern addParameter: #tau_gen
+	value: '(tau/(tau+gamma))*(meank2 - meank)/meank'	
 	
 model := siyrConcern + aparicioConcern.
 		
@@ -39,8 +39,9 @@ model atCompartment: {(#status -> #R)} put: 0.
 model atParameter: #tau assignValue: 0.025.
 model atParameter: #gamma assignValue: 0.1.
 model atParameter: #sigma assignValue: 1.
-model atParameter: #k assignValue: 10.
-model atParameter: #T assignValue: 0.2.
+model atParameter: #meank assignValue: 10.
+"Add the correct value for meank2 below"
+model atParameter: #meank2 assignValue: 10.
 	
 simulator := KESimulator
 	new: #RungeKutta
