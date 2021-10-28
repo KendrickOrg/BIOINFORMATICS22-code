@@ -57,5 +57,5 @@ plt.ylabel('New infections per day')
 plt.title('Poisson network')
 plt.legend()
 plt.show()
-plt.savefig('Plot/Expo.png')
+plt.savefig('Plot/Poisson.png')
 
