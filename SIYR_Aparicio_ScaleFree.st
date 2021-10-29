@@ -40,8 +40,8 @@ model atParameter: #tau assignValue: 0.025.
 model atParameter: #gamma assignValue: 0.1.
 model atParameter: #sigma assignValue: 1.
 model atParameter: #meank assignValue: 10.
-"Add the correct value for meank2 below for scale free network"
-model atParameter: #meank2 assignValue: 10.
+"Correct value of meank2 below for scale free network"
+model atParameter: #meank2 assignValue: 378.7.
 	
 simulator := KESimulator
 	new: #RungeKutta
@@ -55,6 +55,6 @@ chart addDataFrame:
     ((simulator timeSeriesOutputsAt:
          {(#status -> #I)})/10000).
 chart yLabel: 'New infections per day'.
-chart legendTitle: 'Aparicio Exponential Network'.
+chart legendTitle: 'Aparicio Scale free Network'.
 chart plot 
 	 
