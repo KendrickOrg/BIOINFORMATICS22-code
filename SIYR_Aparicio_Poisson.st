@@ -27,7 +27,7 @@ aparicioConcern addParameter: #itgen
 	value: 'I/N'.
 aparicioConcern
 		addParameter: #taugen
-		value: 'tau*(meank2 - meank)/(meank*(tau+gamma))'.	
+		value: 'R0'.	
 
 model := siyrConcern + aparicioConcern.
 		
@@ -35,7 +35,9 @@ model atCompartment: {(#status -> #S)} put: 9950.
 model atCompartment: {(#status -> #I)} put: 30.
 model atCompartment: {(#status -> #Y)} put: 20.
 model atCompartment: {(#status -> #R)} put: 0.
-	
+
+model atParameter: #R0 
+	 assignValue: 'tau*(meank2 - meank)/(meank*(tau+gamma))'.	
 model atParameter: #tau assignValue: 0.025.
 model atParameter: #gamma assignValue: 0.1.
 model atParameter: #sigma assignValue: 1.
