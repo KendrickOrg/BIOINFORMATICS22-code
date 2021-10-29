@@ -40,7 +40,7 @@ model atParameter: #tau assignValue: 0.025.
 model atParameter: #gamma assignValue: 0.1.
 model atParameter: #sigma assignValue: 1.
 model atParameter: #meank assignValue: 10.
-"for Poisson network, meank2 = meank * (meank -1)"
+"for Poisson network, meank2 = meank * (meank + 1)"
 model atParameter: #meank2 assignValue: 110.
 	
 simulator := KESimulator
