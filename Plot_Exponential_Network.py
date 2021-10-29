@@ -24,29 +24,26 @@ xx = np.arange(0, step_max_plot*step, step)
 yy = np.arange(0, step_max_plot*step, step)
 
 plt.figure(figsize=(12,8))
-plt.ylim(0.0,400)
+plt.ylim(0.0,800)
 
 nb_initial_infecteds = 50
 initial_infecteds = range(nb_initial_infecteds)
 
-
-
-
-df1 = pd.read_csv('Sources/Aparicio_ExpoS.csv')
+df1 = pd.read_csv('Stock/Aparicio_Exponential.csv')
 df1 = df1.loc[:, '{#status->#S}']
-df1 = df1*N
+
 inc1 = - df1.diff()/0.1
 inc1 = inc1[:step_max_plot]
 
-df2 = pd.read_csv('Sources/Stroud_HMS.csv')
+df2 = pd.read_csv('Stock/Stroud_HMS.csv')
 df2 = df2.loc[:, '{#status->#S}']
-df2 = df2*N
+
 inc2 = - df2.diff()/0.1
 inc2 = inc2[:step_max_plot]
 
-df3 = pd.read_csv('Sources/Stroud_ExpoS.csv')
+df3 = pd.read_csv('Stock/Stroud_Exponential.csv')
 df3 = df3.loc[:, '{#status->#S}']
-df3 = df3*N
+
 inc3 = - df3.diff()/0.1
 inc3 = inc3[:step_max_plot]
 
