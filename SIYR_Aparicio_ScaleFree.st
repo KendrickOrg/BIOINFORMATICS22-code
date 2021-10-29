@@ -41,11 +41,8 @@ model atParameter: #gamma assignValue: 0.1.
 model atParameter: #sigma assignValue: 1.
 model atParameter: #meank assignValue: 10.
 "Correct value of meank2 below for scale free network"
-"The Internet is a Scale free network. The ratio between meank2/meank taken from table 4.1 of chapter 4 of the book of 
-Barabasi http://networksciencebook.com/chapter/4#scale-free gives meank2/meank = 240.1 /6.34 = 37.87066
-Then the number from this report, I multiply it by meank from our context. 
-So for this implementation meank2 = 37.87066 * 10"
-model atParameter: #meank2 assignValue: 378.7.
+
+model atParameter: #meank2 assignValue: 450.
 	
 simulator := KESimulator
 	new: #RungeKutta
