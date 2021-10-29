@@ -32,19 +32,19 @@ nb_initial_infecteds = 50
 initial_infecteds = range(nb_initial_infecteds)
 
 
-df1 = pd.read_csv('/Users/admin/Desktop/Stock/Aparicio_ScaleFree.csv')
+df1 = pd.read_csv('Stock/Aparicio_ScaleFree.csv')
 df1 = df1.loc[:, '{#status->#S}']
 
 inc1 = - df1.diff()/0.1
 inc1 = inc1[:step_max_plot]
 
-df2 = pd.read_csv('/Users/admin/Desktop/Stock/Stroud_HMS.csv')
+df2 = pd.read_csv('Stock/Stroud_HMS.csv')
 df2 = df2.loc[:, '{#status->#S}']
 
 inc2 = - df2.diff()/0.1
 inc2 = inc2[:step_max_plot]
 
-df3 = pd.read_csv('/Users/admin/Desktop/Stock/Stroud_ScaleS.csv')
+df3 = pd.read_csv('Stock/Stroud_ScaleS.csv')
 df3 = df3.loc[:, '{#status->#S}']
 
 inc3 = - df3.diff()/0.1
