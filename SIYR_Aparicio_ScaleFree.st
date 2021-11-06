@@ -44,7 +44,7 @@ model atParameter: #sigma assignValue: 1.
 model atParameter: #meank assignValue: 10.
 "Correct value of meank2 below for scale free network"
 
-model atParameter: #meank2 assignValue: 450.
+model atParameter: #meank2 assignValue: 950.
 	
 simulator := KESimulator
 	new: #RungeKutta
